@@ -41,6 +41,18 @@ depth = 10;
 reverse_controls = false;
 bridge = 1;
 blink = 5;
+
+// speech
+speech_cooldown = 0;
+speech_cooldown_mark = 300;
+
+// totems
+number_of_jumps = 0;
+groove = false;
+carousel = false;
+sunshine = true;
+
+obj_darkness.visible = false;
 </string>
           </argument>
         </arguments>
@@ -83,6 +95,13 @@ if(reverse_controls)
 view_xview[0] = x - (view_wview[0] / 2);
 view_yview[0] = y - (view_hview[0] / 2);
 
+if(speech_cooldown &gt; speech_cooldown_mark)
+{
+    skeletor_selection = choose(sfx_i_am_not_nice, sfx_i_am_not_kind, sfx_i_am_not_wonderfull, sfx_fools);
+    audio_play_sound(skeletor_selection, 10, false);
+    speech_cooldown = 0;
+}
+
 // DVIZHENJE
 if(keyboard_check(vk_up))
 {
@@ -95,6 +114,7 @@ if(keyboard_check(vk_up))
     obj_shadow_player.vspeed = -character_speed;
     obj_shadow_player.hspeed = 0;
     
+    speech_cooldown++;
 }
 
 if(keyboard_check(vk_down))
@@ -107,6 +127,7 @@ if(keyboard_check(vk_down))
     obj_shadow_player.image_angle = 180;
     obj_shadow_player.vspeed = character_speed;
     obj_shadow_player.hspeed = 0;
+    speech_cooldown++;
 }
 
 
@@ -120,6 +141,7 @@ if(keyboard_check(vk_left))
     obj_shadow_player.image_angle = 90;
     obj_shadow_player.vspeed = 0;
     obj_shadow_player.hspeed = -character_speed;
+    speech_cooldown++;
 }
 
 
@@ -133,6 +155,7 @@ if(keyboard_check(vk_right))
     obj_shadow_player.image_angle = 270;
     obj_shadow_player.vspeed = 0;
     obj_shadow_player.hspeed = character_speed;
+    speech_cooldown++;
 }
 
 
@@ -146,6 +169,7 @@ if(keyboard_check(vk_up) &amp;&amp; keyboard_check(vk_left))
     obj_shadow_player.image_angle = 45; 
     obj_shadow_player.hspeed = -character_speed_sideways; 
     obj_shadow_player.vspeed = -character_speed_sideways; 
+    speech_cooldown++;
 } 
 
 if(keyboard_check(vk_up) &amp;&amp; keyboard_check(vk_right)) 
@@ -158,6 +182,7 @@ if(keyboard_check(vk_up) &amp;&amp; keyboard_check(vk_right))
     obj_shadow_player.image_angle = 360 - 45; 
     obj_shadow_player.hspeed = character_speed_sideways; 
     obj_shadow_player.vspeed = -character_speed_sideways; 
+    speech_cooldown++;
 } 
 
 if(keyboard_check(vk_down) &amp;&amp; keyboard_check(vk_left)) 
@@ -170,6 +195,7 @@ if(keyboard_check(vk_down) &amp;&amp; keyboard_check(vk_left))
     obj_shadow_player.image_angle = 180 - 45; 
     obj_shadow_player.hspeed = -character_speed_sideways; 
     obj_shadow_player.vspeed = character_speed_sideways; 
+    speech_cooldown++;
 } 
 
 if(keyboard_check(vk_down) &amp;&amp; keyboard_check(vk_right)) 
@@ -182,6 +208,7 @@ if(keyboard_check(vk_down) &amp;&amp; keyboard_check(vk_right))
     obj_shadow_player.image_angle = 180 + 45; 
     obj_shadow_player.hspeed = character_speed_sideways; 
     obj_shadow_player.vspeed = character_speed_sideways; 
+    speech_cooldown++;
 }
 
 // ABILITIES 
@@ -190,7 +217,10 @@ if(keyboard_check(vk_down) &amp;&amp; keyboard_check(vk_right))
 if(keyboard_check(vk_control))
 {
     if(bJumpUp == 0)
+    {
         bJumpUp = 1;
+        number_of_jumps++;
+    }
 }
 
 // SPAWN BRIDGE
@@ -268,6 +298,24 @@ if(keyboard_check_pressed(vk_f2))
     }
 }
 
+// TOTEM EFFECTS
+if(place_meeting(x, y, obj_switch))
+{
+    if(keyboard_check_pressed(vk_pageup))
+    {
+        sunshine = true;
+    }
+    if(keyboard_check_pressed(vk_pagedown))
+    {
+        sunshine = false;
+    }
+}
+ 
+if(sunshine)
+    obj_darkness.visible = false;
+if(!sunshine)
+    obj_darkness.visible = true;
+
 // STOP NA ANIMACIJA NA SPRAJT
 if(keyboard_check_released(vk_up) || keyboard_check_released(vk_down) || keyboard_check_released(vk_left) || keyboard_check_released(vk_right) )
 {
@@ -344,27 +392,67 @@ if (place_free(x, y) &amp;&amp; image_xscale &lt;= 1)
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_wall">
+    <event eventtype="4" ename="obj_heart">
       <action>
         <libid>1</libid>
-        <id>115</id>
+        <id>203</id>
         <kind>0</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
         <exetype>1</exetype>
-        <functionname>action_bounce</functionname>
+        <functionname>action_kill_object</functionname>
+        <codestring></codestring>
+        <whoName>obj_heart</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>611</id>
+        <kind>6</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>4</kind>
-            <string>0</string>
+            <kind>1</kind>
+            <string>groove</string>
           </argument>
           <argument>
-            <kind>4</kind>
+            <kind>0</kind>
+            <string>true</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_wall">
+      <action>
+        <libid>1</libid>
+        <id>101</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_move</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>000000000</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
             <string>0</string>
           </argument>
         </arguments>
