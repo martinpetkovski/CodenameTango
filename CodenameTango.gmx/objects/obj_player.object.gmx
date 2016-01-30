@@ -225,6 +225,10 @@ if(keyboard_check(vk_control))
 {
     if(bJumpUp == 0)
     {
+        mask = sprite_duplicate(spr_player);
+        sprite_collision_mask(mask,false,2,10,10,10,10,0,255);
+        mask_index = mask;
+        
         bJumpUp = 1;
         number_of_jumps++;
     }
@@ -373,7 +377,9 @@ if(bJumpUp == 0)
 
 // SKOK
 if(bJumpUp != 0)
+{
     image_speed = 0;
+}
 
 if(bJumpUp == 1)
 {
@@ -402,7 +408,16 @@ if(bJumpUp == 2)
     obj_shadow_player.image_yscale += 0.02;
     
     if(image_xscale == scaleStart)
+    {
+        mask_index = spr_player;
+        if(place_meeting(x, y, obj_wall))
+        {
+            moveTo = instance_nearest(x, y, obj_walkway);
+            x = moveTo.x;
+            y = moveTo.y;
+        }
         bJumpUp = 0;
+    }
 }
 
 // FALLING 
@@ -419,6 +434,7 @@ if(fall = true)
         // Falling animation
         image_xscale -= 0.08;
         image_yscale -= 0.08;
+        depth+=10;
         
         obj_shadow_player.depth = 301;
         obj_shadow_player.image_xscale -= 0.08;
@@ -463,25 +479,21 @@ if (place_free(x, y) &amp;&amp; image_xscale &lt;= 1)
     <event eventtype="4" ename="obj_movable">
       <action>
         <libid>1</libid>
-        <id>101</id>
+        <id>212</id>
         <kind>0</kind>
-        <userelative>-1</userelative>
+        <userelative>0</userelative>
         <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
+        <useapplyto>0</useapplyto>
         <exetype>1</exetype>
-        <functionname>action_move</functionname>
+        <functionname>action_end_sound</functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>1</kind>
-            <string>000000000</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>0</string>
+            <kind>6</kind>
+            <sound>-1</sound>
           </argument>
         </arguments>
       </action>
@@ -569,25 +581,21 @@ if (place_free(x, y) &amp;&amp; image_xscale &lt;= 1)
     <event eventtype="4" ename="obj_wall">
       <action>
         <libid>1</libid>
-        <id>101</id>
+        <id>212</id>
         <kind>0</kind>
-        <userelative>-1</userelative>
+        <userelative>0</userelative>
         <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
+        <useapplyto>0</useapplyto>
         <exetype>1</exetype>
-        <functionname>action_move</functionname>
+        <functionname>action_end_sound</functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>1</kind>
-            <string>000000000</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>0</string>
+            <kind>6</kind>
+            <sound>-1</sound>
           </argument>
         </arguments>
       </action>
