@@ -407,7 +407,7 @@ if(bJumpUp == 2)
 
 // FALLING 
 
-if(!(position_meeting(x, y, obj_walkway) || (position_meeting(x, y, obj_blinking_floor) &amp;&amp; obj_blinking_floor.visible)) &amp;&amp; image_xscale &lt;= 1)
+if(!(position_meeting(x, y, obj_walkway) || position_meeting(x,y,obj_most) || (position_meeting(x, y, obj_blinking_floor) &amp;&amp; obj_blinking_floor.visible)) &amp;&amp; image_xscale &lt;= 1)
 {
     fall = true;
 }

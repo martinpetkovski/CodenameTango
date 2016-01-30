@@ -401,6 +401,7 @@
     <instance objName="obj_walkway" x="800" y="192" name="inst_17FCCB2C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_walkway" x="768" y="192" name="inst_4C18CE7A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_walkway" x="768" y="224" name="inst_A8896F88" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_most" x="416" y="704" name="inst_A150B27A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
