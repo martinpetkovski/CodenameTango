@@ -41,8 +41,8 @@ depth = 10;
 
 // ability variables
 reverse_controls = false;
-bridge = 1;
-blink = 5;
+bridge = 10;
+blink = 10;
 
 // speech
 speech_cooldown = 0;
@@ -50,6 +50,8 @@ speech_cooldown_mark = 100;
 
 // totems
 number_of_jumps = 0;
+jump_diff = -10;
+totem_jump_requirement = 5;
 groove = false;
 carousel = false;
 sunshine = true;
@@ -57,6 +59,7 @@ sunshine = true;
 // other
 hasMovable = false;
 fall = false;
+totem_action_radius = 20;
 
 
 obj_darkness.visible = false;
@@ -444,6 +447,39 @@ if(fall = true)
     {
         global.lives--;
         game_restart();
+    }
+}
+
+// TOTEMS 
+
+if(distance_to_object(obj_totem_jump_around) &lt; totem_action_radius)
+{
+    if(keyboard_check(ord('E')) &amp;&amp; !audio_is_playing(mus_jump_around) &amp;&amp; jump_diff != -12)
+    {   
+        audio_play_sound(mus_jump_around, 1, false);
+        jump_diff = number_of_jumps;
+    }
+    
+    if(number_of_jumps - jump_diff == totem_jump_requirement)
+    {
+        bridge++;
+        jump_diff = -12;
+        audio_stop_all();
+    }
+}
+
+if(distance_to_object(obj_totem_groove) &lt; totem_action_radius)
+{
+    if(keyboard_check(ord('E')) &amp;&amp; !audio_is_playing(mus_groove) &amp;&amp; groove != -1)
+    {   
+        audio_play_sound(mus_groove, 1, false);
+    }
+    
+    if(groove == true)
+    {
+        blink += 3;
+        groove = -1;
+        audio_stop_all();
     }
 }
 </string>

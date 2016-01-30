@@ -297,13 +297,12 @@
     <instance objName="obj_walkway" x="192" y="352" name="inst_43D481F9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_heart" x="832" y="320" name="inst_C72F7779" locked="0" code="" scaleX="0.167539268732071" scaleY="0.142222225666046" colour="4294967295" rotation="0"/>
     <instance objName="obj_switch" x="224" y="96" name="inst_536C40D5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_not_heart" x="832" y="416" name="inst_CBB75D59" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_not_heart" x="800" y="416" name="inst_CBB75D59" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_lava" x="544" y="352" name="inst_5732EC7B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_lava" x="512" y="352" name="inst_D6DA0CF3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_lava" x="512" y="384" name="inst_4C728F88" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_lava" x="544" y="384" name="inst_368FD03E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_movable" x="352" y="320" name="inst_5CEFD786" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_darkness" x="1248" y="960" name="inst_427F2D03" locked="0" code="" scaleX="8" scaleY="7" colour="4294967295" rotation="0"/>
     <instance objName="obj_lava" x="576" y="352" name="inst_BB1AA01C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_lava" x="576" y="384" name="inst_F7B5329F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_placeable" x="544" y="320" name="inst_BFD8F8D8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -401,7 +400,25 @@
     <instance objName="obj_walkway" x="800" y="192" name="inst_17FCCB2C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_walkway" x="768" y="192" name="inst_4C18CE7A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_walkway" x="768" y="224" name="inst_A8896F88" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_most" x="416" y="704" name="inst_A150B27A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_most" x="576" y="672" name="inst_CE2FE782" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_walkway" x="864" y="352" name="inst_BAB6B734" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_walkway" x="864" y="320" name="inst_31D4A9F3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_walkway" x="896" y="320" name="inst_DC258296" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_walkway" x="896" y="288" name="inst_8CE45357" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_walkway" x="864" y="288" name="inst_A15D54B7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_walkway" x="832" y="288" name="inst_2260BF49" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_walkway" x="800" y="288" name="inst_135F1058" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_walkway" x="800" y="320" name="inst_924A2F95" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_walkway" x="832" y="320" name="inst_AB60173C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_walkway" x="832" y="352" name="inst_ECC98224" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_walkway" x="800" y="352" name="inst_1BF5FC85" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_walkway" x="800" y="384" name="inst_6B496689" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_walkway" x="832" y="384" name="inst_6A18ED62" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_walkway" x="800" y="416" name="inst_4B462908" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_walkway" x="800" y="448" name="inst_C3A7CB7D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_walkway" x="832" y="448" name="inst_76AF47BA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_walkway" x="832" y="416" name="inst_57D90E05" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_darkness" x="416" y="768" name="inst_7B7314ED" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
