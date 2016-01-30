@@ -19,6 +19,7 @@
     <sound>sound\sfx_you_very_smart</sound>
     <sound>sound\mus_jump_around</sound>
     <sound>sound\mus_groove</sound>
+    <sound>sound\mus_carousel</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_wall</sprite>
@@ -34,6 +35,7 @@
     <sprite>sprites\spr_movable</sprite>
     <sprite>sprites\spr_placeable</sprite>
     <sprite>sprites\spr_totem</sprite>
+    <sprite>sprites\spr_rune</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -54,6 +56,8 @@
     <object>objects\obj_blinking_floor</object>
     <object>objects\obj_totem_jump_around</object>
     <object>objects\obj_totem_groove</object>
+    <object>objects\obj_totem_carousel</object>
+    <object>objects\obj_rune</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
