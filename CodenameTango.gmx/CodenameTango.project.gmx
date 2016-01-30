@@ -9,6 +9,7 @@
     <sound>sound\sfx_i_am_not_kind</sound>
     <sound>sound\sfx_i_am_not_wonderfull</sound>
     <sound>sound\sfx_fools</sound>
+    <sound>sound\sfx_not_a_rapper</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_wall</sprite>

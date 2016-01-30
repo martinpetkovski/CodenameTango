@@ -104,7 +104,7 @@ view_yview[0] = y - (view_hview[0] / 2);
 
 if(speech_cooldown &gt; speech_cooldown_mark)
 {
-    skeletor_selection = choose(sfx_i_am_not_nice, sfx_i_am_not_kind, sfx_i_am_not_wonderfull, sfx_fools);
+    skeletor_selection = choose(sfx_i_am_not_nice, sfx_i_am_not_kind, sfx_i_am_not_wonderfull, sfx_fools, sfx_not_a_rapper);
     audio_play_sound(skeletor_selection, 10, false);
     speech_cooldown = 0;
 }
@@ -446,31 +446,6 @@ if(fall = true)
         game_restart();
     }
 }
-
-
-// COLLISION
-
-// FALLING
-/*
-if (place_free(x, y) &amp;&amp; image_xscale &lt;= 1)
-{
-    if (image_xscale &gt; 0.03)
-    {
-        // Falling animation
-        depth = 300;
-        image_xscale -= 0.08;
-        image_yscale -= 0.08;
-        
-        obj_shadow_player.depth = 301;
-        obj_shadow_player.image_xscale -= 0.08;
-        obj_shadow_player.image_yscale -= 0.08;
-    }
-    else
-    {
-        // What do when player is dead
-    }
-}
-*/
 </string>
           </argument>
         </arguments>
