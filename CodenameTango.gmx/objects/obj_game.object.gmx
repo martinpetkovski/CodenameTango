@@ -8,6 +8,38 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>view_visible[0] = true;
+view_wview[0] = 1366;
+view_hview[0] = 768;
+view_wport[0] = 1366;
+view_hport[0] = 768;
+view_xview[0] = obj_player.x;
+view_yview[0] = obj_player.y;
+
+skeletor_selection = choose(sfx_i_am_not_nice, sfx_i_am_not_kind, sfx_i_am_not_wonderfull, sfx_fools);
+audio_play_sound(skeletor_selection, 10, false);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="5" enumb="82">
       <action>
         <libid>1</libid>
@@ -22,6 +54,27 @@
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>
+</string>
+          </argument>
+        </arguments>
       </action>
     </event>
   </events>
