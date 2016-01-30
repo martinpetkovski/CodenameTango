@@ -19,6 +19,8 @@
     <sprite>sprites\spr_darkness</sprite>
     <sprite>sprites\spr_heart</sprite>
     <sprite>sprites\spr_switch</sprite>
+    <sprite>sprites\spr_not_heart</sprite>
+    <sprite>sprites\spr_lava</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -32,6 +34,8 @@
     <object>objects\obj_heart</object>
     <object>objects\obj_darkness</object>
     <object>objects\obj_switch</object>
+    <object>objects\obj_not_heart</object>
+    <object>objects\obj_lava</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
