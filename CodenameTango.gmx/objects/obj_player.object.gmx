@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>//general
-lives = 5;
+global.lives = 5;
 friction = 0.7;
 character_speed = 6;
 character_speed_sideways = character_speed*0.75;
@@ -53,6 +53,10 @@ number_of_jumps = 0;
 groove = false;
 carousel = false;
 sunshine = true;
+
+// other
+hasMovable = false;
+
 
 obj_darkness.visible = false;
 </string>
@@ -321,8 +325,43 @@ if(!sunshine)
 // LAVA
 if(position_meeting(x,y,obj_lava) &amp;&amp; bJumpUp == 0)
 {
-    lives--;
+    global.lives--;
     game_restart();
+}
+
+// MOVABLE
+if(distance_to_object(obj_movable) &lt; 80)
+{
+    if(keyboard_check_pressed(vk_end))
+    {
+        hasMovable = instance_nearest(x, y, obj_movable);
+    }
+}
+
+if(hasMovable != false)
+{
+    hasMovable.x = x+40;
+    hasMovable.y = y-16;
+}
+
+if(keyboard_check_pressed(vk_home))
+{
+    if(collision_rectangle(obj_movable.x-100, obj_movable.y-100, obj_movable.x+100, obj_movable.y+100, obj_placeable, false, false))
+    {
+        whereToPlace = instance_nearest(x, y, obj_placeable);
+        show_debug_message(hasMovable.x); 
+        hasMovable.x = whereToPlace.x;
+        hasMovable.y = whereToPlace.y;
+        
+        with(obj_lava)
+        {
+            if(distance_to_object(obj_movable) &lt; 80)
+            {
+                instance_destroy();   
+            }
+        }
+    }
+    hasMovable = false;
 }
 
 // STOP NA ANIMACIJA NA SPRAJT
@@ -397,6 +436,32 @@ if (place_free(x, y) &amp;&amp; image_xscale &lt;= 1)
 }
 */
 </string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_movable">
+      <action>
+        <libid>1</libid>
+        <id>101</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_move</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>000000000</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>0</string>
           </argument>
         </arguments>
       </action>

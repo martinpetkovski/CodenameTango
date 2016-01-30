@@ -21,6 +21,8 @@
     <sprite>sprites\spr_switch</sprite>
     <sprite>sprites\spr_not_heart</sprite>
     <sprite>sprites\spr_lava</sprite>
+    <sprite>sprites\spr_movable</sprite>
+    <sprite>sprites\spr_placeable</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -36,6 +38,8 @@
     <object>objects\obj_switch</object>
     <object>objects\obj_not_heart</object>
     <object>objects\obj_lava</object>
+    <object>objects\obj_movable</object>
+    <object>objects\obj_placeable</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
