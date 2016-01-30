@@ -56,6 +56,7 @@ sunshine = true;
 
 // other
 hasMovable = false;
+fall = false;
 
 
 obj_darkness.visible = false;
@@ -321,13 +322,6 @@ if(sunshine)
     obj_darkness.visible = false;
 if(!sunshine)
     obj_darkness.visible = true;
-    
-// LAVA
-if(position_meeting(x,y,obj_lava) &amp;&amp; bJumpUp == 0)
-{
-    global.lives--;
-    game_restart();
-}
 
 // MOVABLE
 if(distance_to_object(obj_movable) &lt; 80)
@@ -357,7 +351,7 @@ if(keyboard_check_pressed(vk_home))
         {
             if(distance_to_object(obj_movable) &lt; 80)
             {
-                instance_destroy();   
+                instance_change(obj_walkway, true);   
             }
         }
     }
@@ -409,6 +403,32 @@ if(bJumpUp == 2)
     
     if(image_xscale == scaleStart)
         bJumpUp = 0;
+}
+
+// FALLING 
+
+if(!(position_meeting(x, y, obj_walkway) || (position_meeting(x, y, obj_blinking_floor) &amp;&amp; obj_blinking_floor.visible)) &amp;&amp; image_xscale &lt;= 1)
+{
+    fall = true;
+}
+
+if(fall = true)
+{
+    if (image_xscale &gt; 0.03)
+    {
+        // Falling animation
+        image_xscale -= 0.08;
+        image_yscale -= 0.08;
+        
+        obj_shadow_player.depth = 301;
+        obj_shadow_player.image_xscale -= 0.08;
+        obj_shadow_player.image_yscale -= 0.08;
+    }
+    else
+    {
+        global.lives--;
+        game_restart();
+    }
 }
 
 

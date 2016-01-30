@@ -40,6 +40,7 @@
     <object>objects\obj_lava</object>
     <object>objects\obj_movable</object>
     <object>objects\obj_placeable</object>
+    <object>objects\obj_blinking_floor</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
