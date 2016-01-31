@@ -519,15 +519,6 @@
     <instance objName="obj_walkway" x="512" y="128" name="inst_8CBA2E80" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_walkway" x="544" y="128" name="inst_71B44833" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_walkway" x="576" y="128" name="inst_2A74579D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_stoner_walkway" x="160" y="448" name="inst_1501BED0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_stoner_walkway" x="192" y="448" name="inst_D15D48DB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_stoner_walkway" x="224" y="448" name="inst_7FAAE8BE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_stoner_walkway" x="256" y="448" name="inst_E0BA481F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_stoner_walkway" x="288" y="448" name="inst_BF299612" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_stoner_walkway" x="320" y="448" name="inst_C5CE24B0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_stoner_walkway" x="352" y="448" name="inst_CD4F5645" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_stoner_walkway" x="384" y="448" name="inst_527CF291" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_stoner_walkway" x="416" y="448" name="inst_6A1B73E1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_stoner_walkway" x="416" y="480" name="inst_8E956B69" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_stoner_walkway" x="384" y="480" name="inst_07908AE7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_stoner_walkway" x="352" y="480" name="inst_1E46AD53" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -536,8 +527,6 @@
     <instance objName="obj_stoner_walkway" x="256" y="480" name="inst_F3444E75" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_stoner_walkway" x="224" y="480" name="inst_726B8345" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_stoner_walkway" x="192" y="480" name="inst_3D584BC9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_stoner_walkway" x="160" y="480" name="inst_131547E1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_stoner_walkway" x="160" y="512" name="inst_484DC1DD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_stoner_walkway" x="192" y="512" name="inst_CB6EA56C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_stoner_walkway" x="224" y="512" name="inst_79F78CD0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_stoner_walkway" x="256" y="512" name="inst_04DD498D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -554,11 +543,8 @@
     <instance objName="obj_stoner_walkway" x="256" y="544" name="inst_F472AA81" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_stoner_walkway" x="224" y="544" name="inst_F4B6519A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_stoner_walkway" x="192" y="544" name="inst_548D462B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_stoner_walkway" x="160" y="544" name="inst_2F5DF7CD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_stoner_walkway" x="160" y="576" name="inst_C7A6770C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_stoner_walkway" x="192" y="576" name="inst_ED5A2302" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_stoner_walkway" x="192" y="608" name="inst_A6C18550" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_stoner_walkway" x="160" y="608" name="inst_3254878D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_stoner_walkway" x="224" y="576" name="inst_8E9C1642" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_stoner_walkway" x="224" y="608" name="inst_DAF5E436" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_stoner_walkway" x="256" y="608" name="inst_256F6E8D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -575,6 +561,20 @@
     <instance objName="obj_stoner_walkway" x="416" y="608" name="inst_744ED274" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_darkness" x="32" y="480" name="inst_7CF5A3AC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_totem_mj" x="288" y="256" name="inst_E004E0BB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_stoner_walkway" x="160" y="608" name="inst_63677BD8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_stoner_walkway" x="160" y="576" name="inst_56A79A9D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_stoner_walkway" x="160" y="544" name="inst_8B112F19" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_stoner_walkway" x="160" y="512" name="inst_24A71539" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_stoner_walkway" x="160" y="480" name="inst_58517B0B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_stoner_walkway" x="160" y="448" name="inst_6BAAFFEE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_stoner_walkway" x="192" y="448" name="inst_C133F9F2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_stoner_walkway" x="224" y="448" name="inst_F1FCAE37" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_stoner_walkway" x="256" y="448" name="inst_D3F34C9E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_stoner_walkway" x="288" y="448" name="inst_BFBAD651" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_stoner_walkway" x="320" y="448" name="inst_CD7017F5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_stoner_walkway" x="352" y="448" name="inst_26800083" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_stoner_walkway" x="384" y="448" name="inst_3E76C50D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_stoner_walkway" x="416" y="448" name="inst_1C1A58E8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
