@@ -367,8 +367,7 @@ if(place_meeting(x, y, obj_stoner_walkway) &amp;&amp; audio_is_playing(mus_billi
     {
         if(sprite_index == spr_rune_3)
         {
-            billiejean = true;
-            show_debug_message(billiejean);
+            obj_player.billiejean = true;
             sprite_index = spr_walkway;
         }
     }
@@ -422,7 +421,6 @@ if(keyboard_check_pressed(vk_home))
     if(collision_rectangle(obj_movable.x-100, obj_movable.y-100, obj_movable.x+100, obj_movable.y+100, obj_placeable, false, false))
     {
         whereToPlace = instance_nearest(x, y, obj_placeable);
-        show_debug_message(hasMovable.x); 
         hasMovable.x = whereToPlace.x;
         hasMovable.y = whereToPlace.y;
         
@@ -614,10 +612,9 @@ if(distance_to_object(obj_totem_mj) &lt; totem_action_radius)
     
     show_debug_message(billiejean);
     
-    if(billiejean == true)
+    if(billiejean == 1)
     {
-        blink += 2;
-        bridge += 2;
+        blink += 5;
         billiejean = -1;
         audio_stop_all();
     }
