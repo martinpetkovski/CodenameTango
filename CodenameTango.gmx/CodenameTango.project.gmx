@@ -20,6 +20,9 @@
     <sound>sound\mus_jump_around</sound>
     <sound>sound\mus_groove</sound>
     <sound>sound\mus_carousel</sound>
+    <sound>sound\mus_steal_my_sunshine</sound>
+    <sound>sound\mus_backwards</sound>
+    <sound>sound\mus_billiejean</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_wall</sprite>
@@ -36,6 +39,9 @@
     <sprite>sprites\spr_placeable</sprite>
     <sprite>sprites\spr_totem</sprite>
     <sprite>sprites\spr_rune</sprite>
+    <sprite>sprites\spr_rune_2</sprite>
+    <sprite>sprites\spr_walkway_white</sprite>
+    <sprite>sprites\spr_rune_3</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -44,6 +50,7 @@
     <object>objects\obj_game</object>
     <object>objects\obj_wall</object>
     <object>objects\obj_walkway</object>
+    <object>objects\obj_stoner_walkway</object>
     <object>objects\obj_shadow_player</object>
     <object>objects\obj_most</object>
     <object>objects\obj_heart</object>
@@ -57,7 +64,11 @@
     <object>objects\obj_totem_jump_around</object>
     <object>objects\obj_totem_groove</object>
     <object>objects\obj_totem_carousel</object>
+    <object>objects\obj_totem_sunshine</object>
+    <object>objects\obj_totem_mj</object>
+    <object>objects\obj_totem_reverse</object>
     <object>objects\obj_rune</object>
+    <object>objects\obj_rune_2</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
