@@ -41,6 +41,7 @@ depth = 10;
 
 // ability variables
 reverse_controls = false;
+are_controls_reverse = 1;
 bridge = 10;
 blink = 10;
 
@@ -102,6 +103,7 @@ if(reverse_controls)
     character_speed = -character_speed;
     character_speed_sideways = -character_speed_sideways;
     reverse_controls = false;
+    are_controls_reverse++;
 }
 
 view_xview[0] = x - (view_wview[0] / 2);
@@ -271,6 +273,18 @@ if(keyboard_check_pressed(vk_f1))
             most_direction = 2;
         if(image_angle &gt;= 270 &amp;&amp; image_angle &lt; 360)
             most_direction = 3;
+            
+        if(are_controls_reverse % 2 == 0)
+        {
+            if(most_direction == 0)
+                most_direction = 2;
+            else if(most_direction == 2)
+                most_direction = 0;
+            else if(most_direction == 1)
+                most_direction = 3;
+            else if(most_direction == 3)
+                most_direction = 1;
+        }
         
         for(i=1; i&lt;=bridge_count; i++)
         {
@@ -303,6 +317,18 @@ if(keyboard_check_pressed(vk_f2))
             blink_direction = 2;
         if(image_angle &gt;= 270 &amp;&amp; image_angle &lt; 360)
             blink_direction = 3;
+
+        if(are_controls_reverse % 2 == 0)
+        {
+            if(blink_direction == 0)
+                blink_direction = 2;
+            else if(blink_direction == 2)
+                blink_direction = 0;
+            else if(blink_direction == 1)
+                blink_direction = 3;
+            else if(blink_direction == 3)
+                blink_direction = 1;
+        }
             
         if(blink_direction == 0)
         {
@@ -415,7 +441,7 @@ if(place_meeting(x, y, obj_stoner_walkway))
     }
 }
 
-if(place_meeting(x,y,obj_walkway))
+if(place_meeting(x,y,obj_walkway) || bJumpUp != 0)
 {
     obj_stoner_walkway.sprite_index = spr_walkway;
 }
@@ -541,6 +567,22 @@ if(fall = true)
 
 // TOTEMS 
 
+if(distance_to_object(obj_totem_mj) &lt; totem_action_radius)
+{
+    if(keyboard_check(ord('E')) &amp;&amp; !audio_is_playing(mus_billiejean) &amp;&amp; obj_player.billiejean != -1)
+    {   
+        audio_play_sound(mus_billiejean, 1, true);
+    }
+    
+    if(obj_player.billiejean == 1)
+    {       
+        bridge++;
+        obj_player.billiejean = -1;
+        audio_stop_all();
+    }
+}
+
+
 if(distance_to_object(obj_totem_jump_around) &lt; totem_action_radius)
 {
     if(keyboard_check(ord('E')) &amp;&amp; !audio_is_playing(mus_jump_around) &amp;&amp; jump_diff != -12)
@@ -551,9 +593,10 @@ if(distance_to_object(obj_totem_jump_around) &lt; totem_action_radius)
     
     if(number_of_jumps - jump_diff == totem_jump_requirement)
     {
-        bridge++;
+        blink++;
         jump_diff = -12;
         audio_stop_all();
+        obj_totem_jump_around.sprite_index = spr_totemtopdown3_glow;
     }
 }
 
@@ -566,9 +609,10 @@ if(distance_to_object(obj_totem_groove) &lt; totem_action_radius)
     
     if(groove == true)
     {
-        blink += 3;
+        blink += 8;
         groove = -1;
         audio_stop_all();
+        obj_totem_groove.sprite_index = spr_totemtopdown4_glow;
     }
 }
 
@@ -585,6 +629,7 @@ if(distance_to_object(obj_totem_carousel) &lt; totem_action_radius)
         bridge += 3;
         carousel = -1;
         audio_stop_all();
+        obj_totem_carousel.sprite_index = spr_zolt_glow;
     }
 }
 
@@ -597,11 +642,11 @@ if(distance_to_object(obj_totem_sunshine) &lt; totem_action_radius)
     
     if(obj_darkness.visible)
     {
-        blink += 5;
-        bridge += 5;
+        bridge ++;
         sunshine = -1;
         audio_stop_all();
         sunshine = true;
+        obj_totem_sunshine.sprite_index = spr_portokalev_glow;
     }
 }
 
@@ -615,29 +660,17 @@ if(distance_to_object(obj_totem_reverse) &lt; totem_action_radius)
     
     if(reverse == true)
     {
-        blink += 5;
+        blink+=3;
+        bridge+=3;
         reverse = -1;
         reverse_controls = true;
         audio_stop_all();
+        obj_totem_reverse.sprite_index = spr_totemtopdown1_glow;
+        
     }
 }
 
-if(distance_to_object(obj_totem_mj) &lt; totem_action_radius)
-{
-    if(keyboard_check(ord('E')) &amp;&amp; !audio_is_playing(mus_billiejean) &amp;&amp; billiejean != -1)
-    {   
-        audio_play_sound(mus_billiejean, 1, true);
-    }
-    
-    show_debug_message(billiejean);
-    
-    if(billiejean == 1)
-    {
-        blink += 5;
-        billiejean = -1;
-        audio_stop_all();
-    }
-}
+
 </string>
           </argument>
         </arguments>
@@ -723,6 +756,59 @@ if(distance_to_object(obj_totem_mj) &lt; totem_action_radius)
           <argument>
             <kind>6</kind>
             <sound>-1</sound>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="5" enumb="77">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>room_goto(room3);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="64">
+      <action>
+        <libid>1</libid>
+        <id>514</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_draw_text</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>2</kind>
+            <string>"BRIDGES: "+string(bridge)+"#BLINKS: "+string(blink)</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>0</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>0</string>
           </argument>
         </arguments>
       </action>

@@ -42,9 +42,48 @@
     <sprite>sprites\spr_rune_2</sprite>
     <sprite>sprites\spr_walkway_white</sprite>
     <sprite>sprites\spr_rune_3</sprite>
+    <sprite>sprites\sprite18_totemtopdown3</sprite>
+    <sprite>sprites\sprite19_totemtopdown4</sprite>
+    <sprite>sprites\sprite20_zolt</sprite>
+    <sprite>sprites\sprite21_123</sprite>
+    <sprite>sprites\sprite22_portokalev</sprite>
+    <sprite>sprites\sprite23_totemtopdown1</sprite>
+    <sprite>sprites\spr_123_glow</sprite>
+    <sprite>sprites\spr_portokalev_glow</sprite>
+    <sprite>sprites\spr_totemtopdown1_glow</sprite>
+    <sprite>sprites\spr_totemtopdown3_glow</sprite>
+    <sprite>sprites\spr_totemtopdown4_glow</sprite>
+    <sprite>sprites\spr_zolt_glow</sprite>
+    <sprite>sprites\sprite0_guito za bosko i martin  ama so hiksoj !</sprite>
+    <sprite>sprites\sprite30_lava</sprite>
+    <sprite>sprites\sprite5_bulding4</sprite>
+    <sprite>sprites\sprite6_CLOUD</sprite>
+    <sprite>sprites\sprite7_mainframe_computer</sprite>
+    <sprite>sprites\sprite8_mountains</sprite>
+    <sprite>sprites\sprite9_asphalt</sprite>
+    <sprite>sprites\sprite10_bulding1</sprite>
+    <sprite>sprites\sprite11_totem1</sprite>
+    <sprite>sprites\sprite12</sprite>
+    <sprite>sprites\sprite13_Untitled-1</sprite>
+    <sprite>sprites\spr_block</sprite>
+    <sprite>sprites\spr_guy</sprite>
+    <sprite>sprites\sprite2_platform1</sprite>
+    <sprite>sprites\sprite3_BULDING2</sprite>
+    <sprite>sprites\sprite4_bulding3</sprite>
+    <sprite>sprites\sprite45</sprite>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\mountains</background>
+    <background>background\background2</background>
+  </backgrounds>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\scr_text.gml</script>
+  </scripts>
+  <fonts name="fonts">
+    <font>fonts\font0</font>
+    <font>fonts\fnt</font>
+  </fonts>
   <objects name="objects">
     <object>objects\obj_player</object>
     <object>objects\obj_game</object>
@@ -69,9 +108,29 @@
     <object>objects\obj_totem_reverse</object>
     <object>objects\obj_rune</object>
     <object>objects\obj_rune_2</object>
+    <object>objects\obj_draw</object>
+    <object>objects\obj_text</object>
+    <object>objects\object2</object>
+    <object>objects\obj_spawner</object>
+    <object>objects\object3</object>
+    <object>objects\object4</object>
+    <object>objects\object5</object>
+    <object>objects\object6</object>
+    <object>objects\object7</object>
+    <object>objects\object8</object>
+    <object>objects\object10</object>
+    <object>objects\oblak</object>
+    <object>objects\obj_block</object>
+    <object>objects\obj_guy</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room0</room>
+    <room>rooms\cmd</room>
+    <room>rooms\the_game</room>
+    <room>rooms\room1</room>
+    <room>rooms\room2</room>
+    <room>rooms\room3</room>
+    <room>rooms\room5</room>
+    <room>rooms\room8</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
